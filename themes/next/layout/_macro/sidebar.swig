@@ -137,6 +137,8 @@
 
           {% include '../_custom/sidebar.swig' %}
         </div>
+
+        {% include '../_partials/google-adsense.swig' %}
       </section>
 
       {% if display_toc and toc(page.content).length > 1 %}
