@@ -78,5 +78,5 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github.com:mathxlee/mathxlee.github.io.git
+  repo: https://__GITHUB_TOKEN__@github.com/mathxlee/mathxlee.github.io.git
   branch: master
