@@ -1,12 +1,19 @@
 {
-  "name": "Matthews-toy-box",
+  "name": "matthews-toy-box",
   "version": "0.0.1",
   "private": true,
   "hexo": {
     "version": "3.4.4"
   },
+  "author": {
+    "name": "Matthew Lee",
+    "email": "woood@hotmail.com",
+    "url": "http://mathxlee.github.io"
+  },
+  "homepage": "http://mathxlee.github.io",
   "scripts": {
-    "build": "hexo clean && hexo generate && hexo deploy"
+    "build": "hexo clean && hexo generate",
+    "deploy": "npm build && hexo deploy"
   },
   "dependencies": {
     "hexo": "^3.2.0",

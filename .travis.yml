@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-- 6.11.3
+- '6.11.3'
 branches:
   only:
   - source
@@ -12,4 +12,4 @@ before_script:
 - git config --global user.email "math.lee@qq.com"
 - sed -i "s/__GITHUB_TOKEN__/${__GITHUB_TOKEN__}/" _config.yml
 
-script: npm run build
+script: npm run deploy
