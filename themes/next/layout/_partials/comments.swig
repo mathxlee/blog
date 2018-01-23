@@ -1,5 +1,3 @@
-{% include './google-adsense.swig' %}
-
 {% if page.comments %}
 
   {% if (theme.duoshuo and theme.duoshuo.shortname) or theme.duoshuo_shortname %}
