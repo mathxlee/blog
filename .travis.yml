@@ -8,10 +8,11 @@ before_script:
 - sed -i "s/__GITHUB_TOKEN__/${__GITHUB_TOKEN__}/" _config.yml
 after_script:
 - echo 'fennuan.com' > ./CNAME
-
-- git add --all
+- git push origin :master
+- ls
+- git add ./CNAME
 - git commit -m 'add a CNAME'
-- git push origin
+- git subtree push --prefix ./ origin master
 
-- echo "Deployed successfully."  
+- echo "Deployed successfully."
 script: npm run deploy
