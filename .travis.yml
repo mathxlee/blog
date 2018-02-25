@@ -3,8 +3,15 @@ node_js:
 - '6.11.3'
 install: npm install
 before_script:
-- echo 'fennuan.com' > ./CNAME
 - git config --global user.name "mathxlee"
 - git config --global user.email "math.lee@qq.com"
 - sed -i "s/__GITHUB_TOKEN__/${__GITHUB_TOKEN__}/" _config.yml
+after_script:
+- echo 'fennuan.com' > ./CNAME
+
+- git add --all
+- git commit -m 'add a CNAME'
+- git push origin
+
+- echo "Deployed successfully."  
 script: npm run deploy
