@@ -8,7 +8,7 @@ before_script:
 - sed -i "s/__GITHUB_TOKEN__/${__GITHUB_TOKEN__}/" _config.yml
 after_script:
 - echo 'fennuan.com' > ./CNAME
-- git push origin :master
+- git push origin master
 - ls
 - git add ./CNAME
 - git commit -m 'add a CNAME'
