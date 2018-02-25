@@ -14,6 +14,8 @@
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="{{ page.lang || page.language || config.language }}">
 
+  <amp-auto-ads type="adsense" data-ad-client="ca-pub-1684021705905899"></amp-auto-ads>
+
   {% set container_class = "container " %}
   {% if theme.sidebar.position %}
     {% set container_class = container_class + 'sidebar-position-' + theme.sidebar.position %}

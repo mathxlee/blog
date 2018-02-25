@@ -13,4 +13,3 @@ Custom head.
     })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
 </script>
 <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
-<amp-auto-ads type="adsense" data-ad-client="ca-pub-1684021705905899"></amp-auto-ads>
