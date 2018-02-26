@@ -1,5 +1,12 @@
 language: node_js
 
+env:
+  global:
+  - USER="mathxlee"
+  - EMAIL="math.lee@qq.com"
+  - REPO="mathxlee.github.io"
+  - GH_REPO="github.com/${USER}/${REPO}.git"
+
 node_js:
 - '6.11.3'
 
@@ -12,11 +19,14 @@ before_script:
 
 script: npm run deploy
 
-after_script:
+after_success:
+- git clone git://${GH_REPO}
+- cd ${REPO}
 - echo 'fennuan.com' > ./CNAME
+- git remote
 - git add ./CNAME
 - git commit -m 'add a CNAME'
-- git push "https://${__GITHUB_TOKEN__}@github.com/mathxlee/mathxlee.github.io.git" master
+- git push "https://${__GITHUB_TOKEN__}@${GH_REPO}" master
 
 - echo "Deployed successfully."
 
