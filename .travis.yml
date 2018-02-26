@@ -7,12 +7,12 @@ before_script:
 - git config --global user.email "math.lee@qq.com"
 - sed -i "s/__GITHUB_TOKEN__/${__GITHUB_TOKEN__}/" _config.yml
 after_script:
-- echo 'fennuan.com' > ./CNAME
-- git push origin :gh-pages
+- echo 'fennuan.com' > ./dist/CNAME
+- git push origin :master
 
 - git add --all
 - git commit -m 'commit from ontario'
-- git subtree push --prefix dist/ origin gh-pages
+- git subtree push --prefix dist/ origin master
 
 - echo "Deployed successfully."
 script: npm run deploy
