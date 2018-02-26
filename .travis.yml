@@ -20,7 +20,7 @@ before_script:
 script: npm run deploy
 
 after_success:
-- git clone git://${GH_REPO}
+- git clone https://${GH_REPO}
 - cd ${REPO}
 - echo 'fennuan.com' > ./CNAME
 - git remote
