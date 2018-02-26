@@ -7,4 +7,5 @@ before_script:
 - git config --global user.email "math.lee@qq.com"
 - sed -i "s/__GITHUB_TOKEN__/${__GITHUB_TOKEN__}/" _config.yml
 script: npm run deploy
-fqdn: fennuan.com
+deploy:
+  fqdn: fennuan.com
