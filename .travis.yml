@@ -1,11 +1,22 @@
 language: node_js
+
 node_js:
 - '6.11.3'
+
 install: npm install
+
 before_script:
 - git config --global user.name "mathxlee"
 - git config --global user.email "math.lee@qq.com"
 - sed -i "s/__GITHUB_TOKEN__/${__GITHUB_TOKEN__}/" _config.yml
+
 script: npm run deploy
-deploy:
-  fqdn: fennuan.com
+
+after_script:
+- echo 'fennuan.com' > ./CNAME
+- git add ./CNAME
+- git commit -m 'add a CNAME'
+- git push "https://${__GITHUB_TOKEN__}@github.com/mathxlee/mathxlee.github.io.git" master
+
+- echo "Deployed successfully."
+
