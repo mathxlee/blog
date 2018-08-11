@@ -31,4 +31,5 @@ after_success:
 - git push "https://${__GITHUB_TOKEN__}@${GH_REPO}" master
 
 - echo "Deployed successfully."
+- echo "Done."
 
