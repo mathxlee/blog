@@ -8,7 +8,7 @@ env:
   - GH_REPO="github.com/${USER}/${REPO}.git"
 
 node_js:
-- '8.11.3'
+- '12.16.2'
 
 install: npm install
 
