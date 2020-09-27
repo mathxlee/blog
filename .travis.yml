@@ -22,13 +22,13 @@ script: npm run deploy
 after_success:
 - git config --global user.name "mathxlee"
 - git config --global user.email "math.lee@qq.com"
-- git clone https://${GH_REPO}
-- cd ${REPO}
-- echo 'fennuan.com' > ./CNAME
-- git remote
-- git add ./CNAME
-- git commit -m 'add a CNAME'
-- git push "https://${__GITHUB_TOKEN__}@${GH_REPO}" master
+# - git clone https://${GH_REPO}
+# - cd ${REPO}
+# - echo 'fennuan.com' > ./CNAME
+# - git remote
+# - git add ./CNAME
+# - git commit -m 'add a CNAME'
+# - git push "https://${__GITHUB_TOKEN__}@${GH_REPO}" master
 
 - echo "Deployed successfully."
 - echo "Done."
